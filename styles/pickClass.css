@@ -1,0 +1,96 @@
+/* Futuristic Choose Class Styles */
+.div-choose-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90vw;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    padding: 20px;
+    /* Ensure the container has good spacing and alignment */
+}
+
+.add-margin {
+    margin-top: 3%;
+}
+
+.div-player-choice {
+    border: 2px solid #ff00ff;
+    color: #61dafb;
+    background-color: #282c34;
+    margin: 0.1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 200px; /* Fixed width for consistency */
+    text-align: center; /* Ensure text is centered */
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.4); /* Subtle purple glow */
+}
+
+/* Hover Effect for Player Choice */
+.div-player-choice:hover {
+    border: 2px solid gold;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    z-index: 100;
+    background-color: #4a4f5a;
+}
+
+.div-class-image {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.4); /* Subtle purple glow around the image */
+}
+
+/* Button Styling */
+.button-choose-class {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #ff00ff;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 8px;
+    margin-top: 1rem;
+}
+
+
+
+/* Wizard Class Image */
+.wizard-img {
+    background-image: url('/images/playerClass/wizardProfile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .div-choose-class {
+        padding: 15px; /* Adjust padding on smaller screens */
+   
+    }
+
+    .div-player-choice {
+        width: 75%; /* Full-width for better space usage */
+        font-size: 14px; /* Slightly smaller font for mobile */
+        margin: 0.5rem 0; /* More margin between choices on mobile */
+    }
+
+    .button-choose-class {
+        width: 100%; /* Full-width button for mobile */
+    }
+
+    .div-class-image {
+        width: 100%; /* Allow the image to stretch on small screens */
+       height:500px;
+    }
+}

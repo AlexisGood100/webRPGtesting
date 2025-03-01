@@ -1,0 +1,207 @@
+/* Battle Overlay Styles */
+.battle-overlay {
+    position: relative;
+  
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.div-battle-container {
+    display: flex;
+    margin:0 auto;
+    justify-content: space-between;
+    /* width: 100%; */
+    max-width: 900px; /* Reduced for mobile */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: linear-gradient(to left, #222, #333 40%, #eee 60%, #333 80%);
+    padding: 15px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+/* Player Side */
+.div-battle-player-side {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    min-width: 200px;
+}
+
+.div-player-background-img {
+    width: 200px; /* Reduced for mobile */
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 15%;
+    border: 2px solid white;
+    background-position: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.div-player-portrait {
+    width: 100%;
+    height: 100%;
+}
+
+.div-player-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    border: 2px solid green;
+    transition: transform 0.3s ease-out;
+}
+
+.div-player-image:hover {
+    transform: scale(1.05);
+}
+
+/* Player Stats */
+.div-container-player-side-stats {
+    margin-top: 10px;
+}
+
+.div-container-player-side-stats p {
+    margin: 5px 0;
+}
+
+/* Button Controls - Player */
+.button-controls-for-player-combat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-player-control-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; /* Reduced gap */
+}
+
+.button-player-control {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 8px 15px; /* Reduced padding for smaller devices */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.button-player-control:hover {
+    background-color: #282c34;
+    color: #61dafb;
+    transform: scale(1.05);
+}
+
+/* Enemy Side */
+.div-battle-enemy-side {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    min-width: 200px;
+}
+
+/* Enemy Portrait */
+.div-container-enemy-side-img {
+    width: 200px; /* Reduced for mobile */
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 15%;
+    border: 2px solid gold;
+    position: relative;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.div-container-enemy-side-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    transition: transform 0.3s ease-out;
+}
+
+
+/* Enemy Stats */
+.div-container-enemy-side-stats {
+    margin-top: 10px;
+}
+
+.div-container-enemy-side-stats p {
+    margin: 5px 0;
+}
+
+
+
+/* Responsive Design for Small Screens */
+@media (max-width: 796px) {
+    .div-battle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-player-background-img, .div-container-enemy-side-img {
+        width: 180px; /* Smaller images for mobile */
+        height: 180px;
+    }
+
+    .button-player-control {
+        padding: 6px 12px; /* Smaller buttons */
+        font-size: 12px;
+    }
+
+    .button-player-control-container {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .battle-overlay {
+        padding: 10px;
+    }
+
+    .button-player-control {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .div-player-background-img, .div-container-enemy-side-img {
+        width: 160px; /* Even smaller for tight mobile screens */
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .battle-overlay {
+        padding: 5px;
+    }
+
+    .div-battle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-player-background-img, .div-container-enemy-side-img {
+        width: 140px; /* Very small for small screens */
+        height: 140px;
+    }
+
+    .button-player-control {
+        padding: 4px 8px; /* Tiny buttons */
+        font-size: 10px;
+    }
+}

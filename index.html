@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <!--  -->
+    <link rel="'stylesheet" href="./styles/utility.css"> <!-- Utility -->
+    <link rel="stylesheet" href="./styles.css"> <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="./styles/inventory.css"> <!-- Inventory -->
+    <link rel="stylesheet" href="./styles/battle.css"> <!-- Battle -->
+    <link rel="stylesheet" href="./styles/map.css"> <!-- Map CSS -->
+    <link rel="stylesheet" href="./styles/familiarStyles.css"> <!-- Familiar -->
+    
+    <link rel="stylesheet" href="./styles/playerStatistics.css"> <!-- Player Statistics -->
+    <link rel="stylesheet" href="./styles/rollContainer.css"> <!-- Roll container --> 
+    <link rel="stylesheet" href="./styles/divMenu.css"> <!-- div menu -->
+    <link rel="stylesheet" href="./styles/equip.css"> <!-- Equip -->
+    <link rel="stylesheet" href="./styles/merchant.css"> <!-- Merchant -->
+
+    <link rel="stylesheet" href="./styles/instructions.css"> <!-- Instructions -->
+    <link rel="stylesheet" href="./styles/scene.css">  <!-- Scene -->
+    <link rel="stylesheet" href="./styles/toolTip.css">     <!-- Tool Tip -->
+    <link rel="stylesheet" href="./styles/pickClass.css">  <!-- Pick Class -->
+
+    <link rel="stylesheet" href="./styles/reward.css"> <!-- Rewards -->
+    <link rel="stylesheet" href="./styles/games/game-reward.css"> <!-- Game for Reward. -->
+
+ 
+    <title>webRPG</title>
+</head>
+
+<body>
+
+<!-- Start of Instructions -->
+
+<div class="div-instructions-container hide">
+    <h1>Instructions</h1>
+    <div class="div-instructions">
+        <p>Welcome to the webRPG</p>
+        <p>This game has crafting, buying and using familiars, a map connected to battles and rewards, farming, and building houses to get workers to harvest mana.</p>
+        <button class="button-instructions">Merchant</button>
+        <button class="button-instructions">Inventory</button>
+        <button class="button-instructions">Equipped Items</button>
+        <button class="button-instructions">Familiars</button>
+        <button class="button-instructions">Map</button>
+
+        <div class="div-instructions-textbox">
+
+            <textbox class="textbox-instructions"></textbox>
+            <p>If you need to see the instructions again, press the space bar.</p>
+            <p>To remove the instructions window press the space bar.</p>
+        </div>
+    </div>
+</div>
+
+<!-- End of Instructions -->
+
+
+<!-- Not finished make sure to come back to scene -->
+<div class="div-scene-container">
+   <div class="div-scene-constituents">
+    <h1 class="h1-scene"></h1>
+    <div class="div-inside-image">
+
+    </div>
+    <div class="p-story-container">
+        <p class="p-story-info">
+           
+        </p>
+    </div>
+    <button class="button-further-story">Next</button>
+   </div>
+</div>
+<!-- End of not finished scene -->
+
+
+
+
+<div class="div-choose-class hide">
+
+    <div class="div-player-choice hide">
+        <h1>Priest</h1>
+        <div class="div-class-image">
+
+        </div> 
+  
+        <button class="button-choose-class">Choose</button>
+    </div>
+
+    <div class="div-player-choice hide">
+        <h1>Fighter</h1>
+        <div class="div-class-image">
+         
+        </div>
+  
+        <button class="button-choose-class">Choose</button>
+    </div>
+
+
+    <div class="div-player-choice hide">
+        <h1>Wizard</h1>
+        <div class="div-class-image">
+       
+        </div>
+
+        <button class="button-choose-class">Choose</button>
+    </div>
+
+    <div class="div-player-choice hide">
+        <h1>Assassin</h1>
+        <div class="div-class-image">
+           
+        </div>
+
+        <button class="button-choose-class">Choose</button>
+    </div>
+</div>
+
+
+<!-- End of choosing the initial class -->
+
+
+
+ <!-- Start of the Menu -->
+    
+ <div class="div-menu hide">
+    <h1 class="h1-menu-item hide">Player Statistics</h1>
+    <h1 class="h1-menu-item hide">Merchant</h1>
+    <h1 class="h1-menu-item hide">Equippable</h1>
+    <h1 class="h1-menu-item hide">Inventory</h1>
+    <h1 class="h1-menu-item hide">Familiars</h1>
+    <h1 class="h1-menu-item hide">Map</h1>
+</div>
+<!-- End of the Menu -->
+
+
+
+
+
+<!-- Start of the statistics and player image container -->
+
+
+
+<div class="container-for-profile-img-stats hide">
+
+    <img class="div-player-image">
+        
+        
+    </img>
+    <div class="container-for-stats-and-images">
+        
+        
+        
+        <div class="div-player-statistics">
+            
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+<!--     End of player statistics   -->
+
+
+
+
+
+
+
+
+
+<div class="instructions-to-game-page hide">
+    <div class="instruction-container">
+        <!-- make this text align center -->
+        <h1 id="text-instructions white">Instructions</h1>
+        <p id="text-instructions">You must first go to the map and click on one of the world tiles. This will bring you into a battle.</p>
+        <p id="text-instructions">In this battle, you can use Attack, Defend, 3 types of special attack, use a mana potion, a healing potion, or switch to your familiar.</p>
+        <p id="text-instructions">Through battle you will earn gold that you can use to start production, buy weapons and armor, or use to buy houses.</p>
+        <p id="text-instructions">You can use the buy items from the merchant, which will go into your inventory.</p>
+        <p id="text-instructions">From the inventory, you can choose to equip items. You can go to the equip tab to see equipped items and unequip them.</p>
+        <p id="text-instructions">You will gain levels and your attributes will increase with each battle.</p>
+        <p id="text-instructions">To see these instructions again, you can hit the space bar at any time.</p>
+        <button class="button-done-with-instructions">Continue</button>
+    </div>
+</div>
+    
+<div class="end-of-battle-screen hide">
+    <h1 class="blue-color">Rewards</h1>
+    <div class="div-reward-container">
+        <div class="reward-box">
+
+        </div>
+        <div class="reward-content hide">
+        <p>You have received the following rewards for completing the battle.</p>
+        <p class="p-battle-rewards">Gold: </p>
+        <button class="button-remove-reward-screen">
+            Continue
+        </button>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+   
+
+
+<!-- Start of the div familiar container -->
+
+    <div class="div-familiar-container hide">
+        <h1 class="blue-color">Familiars</h1>
+        <div class="option container">
+            <h1>Switch Familiar Screen</h1>
+            <button class="button-familiar-available">Available</button>
+            <button class="button-familiar-owned">Owned</button>
+        </div>
+        <h1 class="blue-color">Familiars</h1>
+        <div class="div-familiar-container-list">
+
+        </div>
+       
+        <div class="div-familiar-container-list-owned">
+            
+        </div>
+    </div>
+
+<!-- End of the code for the familiars -->
+    
+<!-- Start of the choosing class code -->
+
+ 
+
+
+    <!-- End of code for picking character for start of game -->
+
+    <!-- Start of code for the dice roll -->
+    <div class="roll-die-container hide">
+        <h1>Roll Die for Statistics</h1>
+     
+        <div class="div-image-dice">
+            <button class="roll-die button-roll-die">Roll</button>
+            <button class="roll-die-accept button-roll-die">Accept</button>
+        </div>
+        
+            <div class="div-character-dice-roll-container">
+                
+        </div>
+    </div>
+    <!-- End of code fo dice roll -->
+    
+    <!-- Start of code fo merchant -->
+    <div class="div-merchant hide">
+        <h1>Welcome to the merchant</h1>
+        <h1>Player Gold: <span class="span-player-gold" id="span-player-gold">0</span></h1>
+        <h1>Player Health: <span class="span-player-health">0</span></h1>
+        <h1>Player Mana: <span class="span-player-mana">0</span></h1>
+        <div class="div-item-container">
+
+        </div>
+        </div>
+        <!-- End of Merchant code -->
+
+        <!-- Start of player inventory -->
+        <div class="div-inventory-container-container hide">
+            <h1 class="h1-inventory">Inventory</h1>
+            <div class="div-inventory-container">
+
+            </div>
+        </div>
+    <!-- End of inventory code -->
+
+    
+<!-- End of Player Statitics  -->
+
+
+
+<div class="battle-overlay hide">
+    <div class="div-battle-container hide">
+<!-- Player side -->
+        <div class="div-battle-player-side">
+            <img class="div-player-background-img"></img>
+            <div class="player-battle-stats"></div>
+            <div class="button-controls-for-player-combat">
+                <div class="button-player-control-container">
+                    <button class="button-player-control">Attack</button>
+                    <button class="button-player-control">Defend</button>
+                    <button class="button-player-control">Special 1</button>
+                    <button class="button-player-control">Special 2</button>
+                </div>
+                <div class="button-player-control-container">
+                    <button class="button-player-control">Special 3</button>
+                    <button class="button-player-control">HP Potion</button>
+                    <button class="button-player-control">MP Potion</button>
+                    <button class="button-player-control">Switch</button>
+                </div>
+            </div>
+
+        </div>
+
+<!-- Enemy side -->
+        <div class="div-battle-enemy-side">
+
+<div class="div-container-enemy-side">
+    <div class="div-container-enemy-side-img">
+
+    </div>
+    <div class="div-container-enemy-side-stats">
+        
+    </div>
+                
+            </div>
+        </div>
+        <div class="button-controls-for-enemy-combat">
+                
+        </div>
+    </div>
+</div>
+<!-- End of the battle overlay -->
+
+
+<!-- Start of the  equip code -->
+<div class="div-player-equip-area hide">
+
+    <div class="div-armor-head hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Head</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+
+    </div>
+    <div class="div-armor-torso hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Torso</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+
+    </div>
+  
+    <div class="div-armor-hands hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Hands</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+
+
+    <div class="div-armor-feet hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Feet</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+
+    <div class="div-weaponRight hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Weapon-R</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+
+    <div class="div-weaponLeft hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Weapon-L</h1>
+            <button class="button-unequip">Unequip</button>
+        </div> 
+    </div>
+
+    <div class="div-ringRight hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Ring-R</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+
+    <div class="div-ringLeft hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Ring-L</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+
+    <div class="div-belt hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Belt</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+
+    <div class="div-necklace hide div-equip-slot">
+        <div class="div-equip-item-image">
+            <h1>Necklace</h1>
+            <button class="button-unequip">Unequip</button>
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- End of the code for Equip Section-->
+
+
+
+<!-- Player Statistics  -->
+
+
+<!-- Start of Map -->
+
+<div class="div-map-container hide">
+    <h1 class="h1-map-level">Map Level: 0</h1>
+    <h1 class="h1-map-level-h1">Click a Map Tile to Proceed to Battle.</h1>
+    <div class="div-map-piece-container">
+
+    </div>
+</div>
+<!-- End of the map -->
+
+
+
+
+
+    <!-- Player functions / -->
+    <script src="./playerFunctions/createRandomEnemies.js"></script>
+   
+    <script src="./playerFunctions/createDifferentClasses.js"></script>
+    <script src="./playerFunctions/rollDie.js"></script>
+    <script src="./playerFunctions/activatePlayerStatistics.js"></script>
+    <script src="./playerFunctions/manipulateHealth.js"></script>
+    <!-- End of player functions  -->
+
+    
+    <!-- Merchant -->
+    <script src="./merchantFunctions/createMerchantItem.js"></script>
+    <script src="./merchantFunctions/createMerchantDisplay.js"></script>
+    <!-- End of Merchant -->
+
+    <!-- Event listeners -->
+    <script src="./EventListeners/UI/keydownInstructions.js"></script>
+    <script src="./EventListeners/UI/buttonsInstructions.js"></script>
+    <script src="./EventListeners/UI/playerChoices.js"></script>
+    <script src="./EventListeners/buttonRollDie.js"></script>
+    <script src="./EventListeners/UI/buttonsEquipItems.js"></script>
+    <script src="./EventListeners/UI/changeProfileImg.js"></script>
+    <script src="./EventListeners/UI/h1MenuItemsAll.js"></script>
+    <script src="./EventListeners/UI/familiarButtonOwned.js"></script>
+    <script src="./EventListeners/UI/familiarAvailableButton.js"></script>
+    <script src="./EventListeners/UI/instructionsButton.js"></script>
+    <script src="./EventListeners/rewardContinueButton.js"></script>
+    <!-- End of event listeners -->
+    
+   
+    <!-- Start of famililar -->
+    <script src="/FamiliarFunctions/createRandomFamiliar.js"></script>
+    <script src="/displayFunctions/familiar/createPlayerFamiliarDiv.js"></script>
+    <!-- End of familiar -->
+
+
+    <script src="./displayFunctions/setBattleButtons.js"></script>
+    <script src="./displayFunctions/familiar/createFamiliars.js"></script>
+    <script src="./displayFunctions/familiar/displayPlayerFamiliars.js"></script>
+    <script src="./displayFunctions/Menu/hideMenuEquipSlots.js"></script>
+<script src="./displayFunctions/Menu/findElementContainerByIndex.js"></script>
+<script src="./displayFunctions/createItemDisplay.js"></script>
+    <script src="./displayFunctions/displayEnemyClass.js"></script>
+    <script src="./displayFunctions/player/displayPlayerClassRollObject.js"></script>
+    <script src="./displayFunctions/player/displayPlayerClass.js"></script>
+    <script src="./displayFunctions/initiateBattle.js"></script>
+    <script src="./displayFunctions/map.js"></script>
+    <script src="./displayFunctions/hideAllDivs.js"></script>
+    <script src="./displayFunctions/familiar/displayFamiliarButtonSet.js"></script>
+    <!-- End of Display functions / -->
+    
+    
+    <!-- Reward -->
+    <script src="./rewardFunctions/giveReward.js"></script>
+    <script src="./rewardFunctions/displayEndBattleResults.js"></script>
+    <!-- End of Reward -->
+
+    <!-- Classes -->
+    <script src="./playerFunctions/battleButtons.js"></script>
+    <script src="./classes/PlayerClass.js"></script>
+    <script src="./classes/Familiar.js"></script>
+    <script src="./classes/Item.js"></script>
+    <script src="./classes/Scene.js"></script>
+    <script src="./classes/Java.js"></script>
+    <script src="./classes/Skills.js"></script> 
+    <script src="./classes/armorSet.js"></script>
+    <script src="./classes/weaponSet.js"></script>
+    <!-- End of classes -->
+    <!-- Left off here. need to update all equip functions to use the new armorset class.  -->
+
+    
+    <!-- Utility Functions -->
+    <script src="./utilityFunctions/giveIdtoList.js"></script>
+    <script src="./utilityFunctions/randomNumberMaker.js"></script>
+    <!-- End of utility functions -->
+
+    <!-- Init funcs -->
+    <script src="./initializing/unequipInit.js"></script>
+    <!-- End of init funcs -->
+
+
+
+    <!-- Main Script -->
+    <script src="./index.js"></script>
+    <!-- End of main script -->
+</body>
+
+</html>
+
